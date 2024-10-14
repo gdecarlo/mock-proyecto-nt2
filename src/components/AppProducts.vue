@@ -1,7 +1,7 @@
 <template>
      <div class="product-grid">
         <div v-for="product in products" :key="product.id" class="product-card">
-          <img :src="`${product.image}${product.id}`" :alt="product.title" class="product-image">
+          <img :src="product.thumbnail" :alt="product.title" class="product-image">
           <div class="product-info">
             <div class="product-title">{{ product.title }}</div>
             <div class="product-price">${{ product.price.toFixed(2) }}</div>
@@ -24,30 +24,108 @@
 <script setup>
 import { ref } from 'vue'
 
+
+
 const products = ref([
-  {
-    id: 1,
-    title: 'Cámara Vintage',
-    price: 199.99,
-    image: 'https://picsum.photos/250?random='
-  },
-  {
-    id: 2,
-    title: 'Auriculares Premium',
-    price: 149.99,
-    image: 'https://picsum.photos/250?random='
-  },
-  {
-    id: 3,
-    title: 'Smartwatch Elegante',
-    price: 299.99,
-    image: 'https://picsum.photos/250?random='
-  },
-  {
-    id: 4,
-    title: 'Altavoz Portátil',
-    price: 89.99,
-    image: 'https://picsum.photos/250?random='
-  }
+{
+      "id": 168,
+      "title": "Charger SXT RWD",
+      "price": 32999.99,
+      "quantity": 3,
+      "total": 98999.97,
+      "discountPercentage": 13.39,
+      "discountedTotal": 85743.87,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/vehicle/Charger%20SXT%20RWD/thumbnail.png"
+    },
+    {
+      "id": 78,
+      "title": "Apple MacBook Pro 14 Inch Space Grey",
+      "price": 1999.99,
+      "quantity": 2,
+      "total": 3999.98,
+      "discountPercentage": 18.52,
+      "discountedTotal": 3259.18,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png"
+    },
+    {
+      "id": 183,
+      "title": "Green Oval Earring",
+      "price": 24.99,
+      "quantity": 5,
+      "total": 124.95,
+      "discountPercentage": 6.28,
+      "discountedTotal": 117.1,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-jewellery/Green%20Oval%20Earring/thumbnail.png"
+    },
+    {
+      "id": 100,
+      "title": "Apple Airpods",
+      "price": 129.99,
+      "quantity": 5,
+      "total": 649.95,
+      "discountPercentage": 12.84,
+      "discountedTotal": 566.5,
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
+    },
+    {
+          "id": 108,
+          "title": "iPhone 12 Silicone Case with MagSafe Plum",
+          "price": 29.99,
+          "quantity": 2,
+          "total": 59.98,
+          "discountPercentage": 14.68,
+          "discountedTotal": 51.17,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/iPhone%2012%20Silicone%20Case%20with%20MagSafe%20Plum/thumbnail.png"
+        },
+        {
+          "id": 138,
+          "title": "Baseball Ball",
+          "price": 8.99,
+          "quantity": 5,
+          "total": 44.95,
+          "discountPercentage": 18.49,
+          "discountedTotal": 36.64,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Baseball%20Ball/thumbnail.png"
+        },
+        {
+          "id": 157,
+          "title": "Party Glasses",
+          "price": 19.99,
+          "quantity": 2,
+          "total": 39.98,
+          "discountPercentage": 19.17,
+          "discountedTotal": 32.32,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Party%20Glasses/thumbnail.png"
+        },
+        {
+          "id": 8,
+          "title": "Dior J'adore",
+          "price": 89.99,
+          "quantity": 3,
+          "total": 269.97,
+          "discountPercentage": 10.79,
+          "discountedTotal": 240.84,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png"
+        },
+        {
+          "id": 80,
+          "title": "Huawei Matebook X Pro",
+          "price": 1399.99,
+          "quantity": 5,
+          "total": 6999.95,
+          "discountPercentage": 9.99,
+          "discountedTotal": 6300.65,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Huawei%20Matebook%20X%20Pro/thumbnail.png"
+        },
+        {
+          "id": 28,
+          "title": "Ice Cream",
+          "price": 5.49,
+          "quantity": 3,
+          "total": 16.47,
+          "discountPercentage": 10,
+          "discountedTotal": 14.82,
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Ice%20Cream/thumbnail.png"
+        }
 ])
 </script>
