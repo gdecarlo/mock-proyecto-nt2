@@ -5,13 +5,22 @@
         <a href="#">Dashboard</a>
         <a href="#" class="ver-carrito">
           Ver carrito
-          <span class="cart-count">3</span>
+          <span class="cart-count">{{ cartSize }}</span>
         </a>
         <a href="#" class="salir">Salir</a>
       </div>
     </nav>
 
 </template>
+
+<script setup>
+import { storeToRefs } from 'pinia';
+import { useShoppingCartStore } from '../stores/shoppingCartStore';
+
+const cartStore = useShoppingCartStore()
+const {cartSize} = storeToRefs(cartStore)
+
+</script>
 
 <style>
 .navbar {
